@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cool To-Do Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="add-todo">Add To-Do</button>
+    <dialog id="add-todo-dialog">
+      <p class="form-title">Input To-Do Details</p>
+      <form method="dialog">
+        <div class="form-container">
+          <input type="text" id="title" placeholder="Title" required />
+          <textarea
+            id="description"
+            placeholder="What needs to be done?"
+            required
+          ></textarea>
+          <input type="date" id="dueDate" placeholder="Due Date" required />
+          <label for="priority">Priority:</label>
+          <select id="priority" required>
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+          </select>
+          <button type="button" id="submit">Submit</button>
+        </div>
+      </form>
+    </dialog>
+
+    <main class="container">
+      <div class="do-now">Do Now</div>
+      <div class="schedule">Schedule</div>
+      <div class="delegate">Delegate</div>
+      <div class="delete">Delete</div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
