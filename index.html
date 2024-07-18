@@ -7,7 +7,24 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button class="add-todo">Add To-Do</button>
+    <!-- Background overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- Fixed nav and sidebar -->
+    <div class="main-grid">
+      <nav class="top-nav">Nav</nav>
+      <aside class="main-sidebar">
+        <button class="add-todo">Add To-Do</button>
+      </aside>
+      <main class="container">
+        <div class="do-now">Do Now</div>
+        <div class="schedule">Schedule</div>
+        <div class="delegate">Delegate</div>
+        <div class="delete">Delete</div>
+      </main>
+    </div>
+
+    <!-- Dialog -->
     <dialog id="add-todo-dialog">
       <p class="form-title">Input To-Do Details</p>
       <form method="dialog">
@@ -20,7 +37,7 @@
           ></textarea>
           <input type="date" id="dueDate" placeholder="Due Date" required />
           <label for="priority">Priority:</label>
-          <select id="priority" required>
+          <select id="priority" class="priority-select" required>
             <option value="High">High</option>
             <option value="Low">Low</option>
           </select>
@@ -29,12 +46,6 @@
       </form>
     </dialog>
 
-    <main class="container">
-      <div class="do-now">Do Now</div>
-      <div class="schedule">Schedule</div>
-      <div class="delegate">Delegate</div>
-      <div class="delete">Delete</div>
-    </main>
     <script src="index.js"></script>
   </body>
 </html>

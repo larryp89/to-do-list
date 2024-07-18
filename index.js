@@ -38,9 +38,11 @@ const appLogic = new AppLogic();
 const addButton = document.querySelector(".add-todo");
 const dialog = document.querySelector("#add-todo-dialog");
 const formSubmit = document.querySelector("#submit");
+const backgroundOverlay = document.querySelector(".background-overlay");
 
 addButton.addEventListener("click", function () {
   dialog.showModal();
+  backgroundOverlay.style.display = "block";
 });
 
 formSubmit.addEventListener("click", function (event) {
@@ -59,4 +61,8 @@ formSubmit.addEventListener("click", function (event) {
   } else {
     alert("Please fill all fields");
   }
+});
+
+dialog.addEventListener("close", () => {
+  backgroundOverlay.style.display = "none";
 });
